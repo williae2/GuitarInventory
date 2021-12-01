@@ -1,3 +1,7 @@
-public class Type {
-    
+enum Type{
+    ACOUSTIC,
+    ELECTRIC,
+    ELECTROACOUSTIC,
+    BASS,
+    OTHER
 }

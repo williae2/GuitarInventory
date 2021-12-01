@@ -30,4 +30,10 @@ public class Guitar extends StringInstrument{
         //need to check that the spec is the right kind of spec
         this.spec = spec;
     }
+
+	@Override
+	protected InstrumentSpec getInstrumentSpec() {
+		// TODO Auto-generated method stub
+		return this.spec;
+	}
 }

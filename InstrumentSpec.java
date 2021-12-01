@@ -12,4 +12,6 @@ abstract class InstrumentSpec {
 
     public abstract boolean compareSpec(InstrumentSpec spec);
 
+	public abstract int getNumStrings();
+
 }

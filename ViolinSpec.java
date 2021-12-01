@@ -17,38 +17,45 @@ public class ViolinSpec extends InstrumentSpec {
 	}
 
 	@Override
+	public
 	Builder getBuilder() {
 		// TODO Auto-generated method stub
 		return builder;
 	}
 
 	@Override
+	public
 	Type getType() {
 		// TODO Auto-generated method stub
 		return type;
 	}
 
 	@Override
+	public
 	String getModel() {
 		// TODO Auto-generated method stub
 		return model;
 	}
 
 	@Override
+	public
 	Wood getTopWood() {
 		// TODO Auto-generated method stub
 		return topWood;
 	}
 
 	@Override
+	public
 	Wood getBackWood() {
 		// TODO Auto-generated method stub
 		return backWood;
 	}
 
 	@Override
+	public
 	boolean compareSpec(InstrumentSpec spec) {
 		// TODO Auto-generated method stub
+		if(!this.getClass().equals(spec.getClass())) return false;
 		if(builder != spec.getBuilder()) return false;
 		if(type != spec.getType()) return false;
 		if(model!=null && !model.equals("") &&
@@ -60,6 +67,7 @@ public class ViolinSpec extends InstrumentSpec {
 	}
 
 	@Override
+	public
 	int getNumStrings() {
 		// TODO Auto-generated method stub
 		return numStrings;

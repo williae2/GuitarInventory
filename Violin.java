@@ -29,4 +29,10 @@ public class Violin extends StringInstrument{
     public void editInstrumentSpec(InstrumentSpec spec) {
         this.spec = spec;
     }
+
+	@Override
+	protected InstrumentSpec getInstrumentSpec() {
+		// TODO Auto-generated method stub
+		return this.spec;
+	}
 }

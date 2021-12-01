@@ -13,7 +13,7 @@ public class Data{
 	public void readFile(){
 		ArrayList<StringInstrument> toReturn = new ArrayList<>();
 		try {
-		      File myObj = new File("inventory.txt");
+		      File myObj = new File("Inventory.txt");
 		      Scanner myReader = new Scanner(myObj);
 		      while (myReader.hasNextLine()) {
 		        String data = myReader.nextLine();
@@ -25,101 +25,122 @@ public class Data{
 		        Wood bw;
 		        Builder b;
 		        switch(split[3]) {
-		        	case "Any":
-		        		b = Builder.ANY;
-		        		break;
-		        	case "Fender":
+		        	case "FENDER":
 		        		b = Builder.FENDER;
 		        		break;
-		        	case "Martin":
+		        	case "MARTIN":
 		        		b = Builder.MARTIN;
 		        		break;
-		        	case "Gibson":
+		        	case "GIBSON":
 		        		b = Builder.GIBSON;
 		        		break;
-		        	case "Collings":
-		        		b = Builder.COLLINGS;
-		        		break;
-		        	case "Olson":
-		        		b = Builder.OLSON;
-		        		break;
-		        	case "Ryan":
-		        		b = Builder.RYAN;
-		        		break;
-		        	case "Prs":
+		        	case "PRS":
 		        		b = Builder.PRS;
 		        		break;
+		        	case "GUILD":
+		        		b = Builder.GUILD;
+		        		break;
+		        	case "SEAGULL":
+		        		b = Builder.SEAGULL;
+		        		break;
+		        	case "YAMAHA":
+		        		b = Builder.YAMAHA;
+		        		break;
+		        	case "OVATION":
+		        		b = Builder.OVATION;
+		        		break;
+		        	case "WASHBURN":
+		        		b = Builder.WASHBURN;
+		        		break;
+		        	case "EPIPHONE":
+		        		b = Builder.EPIPHONE;
+		        		break;
+		        	case "ESP":
+		        		b = Builder.ESP;
+		        		break;
+		        	case "GRETSCH":
+		        		b = Builder.GRETSCH;
+		        		break;
+		        	case "IBANEZ":
+		        		b = Builder.IBANEZ;
+		        		break;
+		        	case "TAYLOR":
+		        		b = Builder.TAYLOR;
+		        		break;
+		        	case "RICKENBACKER":
+		        		b = Builder.RICKENBACKER;
+		        		break;
 		        	default:
-		        		b = Builder.ANY;
+		        		b = Builder.GIBSON;
 		        }
 		        switch(split[4]) {
-		        	case "Electric":
+		        	case "ELECTRIC":
 		        		t = Type.ELECTRIC;
 		        		break;
-		        	case "Acoustic":
+		        	case "ACOUSTIC":
 		        		t = Type.ACOUSTIC;
 		        		break;
+		        	case "ELECTROACOUSTIC":
+		        		t = Type.ELECTROACOUSTIC;
+		        		break;
+		        	case "BASS":
+		        		t = Type.BASS;
+		        		break;
 		        	default:
-		        		t = null;
+		        		t = Type.OTHER;
 		        }
 		        switch(split[6]) {
-		        	case "Indian_Rosewood":
-		        		tw = Wood.INDIAN_ROSEWOOD;
+		        	case "BASSWOOD":
+		        		tw = Wood.BASSWOOD;
 		        		break;
-		        	case "Brazillian_Rosewood":
-		        		tw = Wood.BRAZILLIAN_ROSEWOOD;
+		        	case "WALNUT":
+		        		tw = Wood.WALNUT;
 		        		break;
-		        	case "Mahogany":
+		        	case "ROSEWOOD":
+		        		tw = Wood.ROSEWOOD;
+		        		break;
+		        	case "EBONY":
+		        		tw = Wood.EBONY;
+		        		break;
+		        	case "WENGE":
+		        		tw = Wood.WENGE;
+		        		break;
+		        	case "MAHOGANY":
 		        		tw = Wood.MAHOGANY;
 		        		break;
-		        	case "Maple":
+		        	case "MAPLE":
 		        		tw = Wood.MAPLE;
 		        		break;
-		        	case "Cocobolo":
-		        		tw = Wood.COCOBOLO;
-		        		break;
-		        	case "Cedar":
-		        		tw = Wood.CEDAR;
-		        		break;
-		        	case "Adirondack":
-		        		tw = Wood.ADIRONDACK;
-		        		break;
-		        	case "Alder":
+		        	case "ALDER":
 		        		tw = Wood.ALDER;
-		        		break;
-		        	case "Sitka":
-		        		tw = Wood.SITKA;
 		        		break;
 		        	default:
 		        		tw = null;
 		        }
 		        switch(split[7]) {
-		        case "Indian_Rosewood":
-	        		bw = Wood.INDIAN_ROSEWOOD;
+		        case "BASSWOOD":
+	        		bw = Wood.BASSWOOD;
 	        		break;
-	        	case "Brazillian_Rosewood":
-	        		bw = Wood.BRAZILLIAN_ROSEWOOD;
+	        	case "WALNUT":
+	        		bw = Wood.WALNUT;
 	        		break;
-	        	case "Mahogany":
+	        	case "ROSEWOOD":
+	        		bw = Wood.ROSEWOOD;
+	        		break;
+	        	case "EBONY":
+	        		bw = Wood.EBONY;
+	        		break;
+	        	case "WENGE":
+	        		bw = Wood.WENGE;
+	        		break;
+	        	case "MAHOGANY":
 	        		bw = Wood.MAHOGANY;
 	        		break;
-	        	case "Maple":
+	        	case "MAPLE":
 	        		bw = Wood.MAPLE;
 	        		break;
-	        	case "Cocobolo":
-	        		bw = Wood.COCOBOLO;
-	        		break;
-	        	case "Cedar":
-	        		bw = Wood.CEDAR;
-	        		break;
-	        	case "Adirondack":
-	        		bw = Wood.ADIRONDACK;
-	        		break;
-	        	case "Alder":
+	        	case "ALDER":
 	        		bw = Wood.ALDER;
-	        		break;
-	        	case "Sitka":
-	        		bw = Wood.SITKA;
 	        		break;
 	        	default:
 	        		bw = null;
@@ -127,13 +148,13 @@ public class Data{
 		        
 		        if(split[0].equals("Violin")) {
 		        	is = new ViolinSpec(b, t, tw, bw, split[5], Integer.parseInt(split[8]));
-		        	si = new Violin(split[1], Double.parseDouble(split[2]), is);
+		        	si = new Violin(Integer.parseInt(split[1]), Double.parseDouble(split[2]), is);
 		        } else if(split[0].equals("Mandolin")) {
 		        	is = new MandolinSpec(b, t, tw, bw, split[5], Integer.parseInt(split[8]));
-		        	si = new Mandolin(split[1], Double.parseDouble(split[2]), is);
+		        	si = new Mandolin(Integer.parseInt(split[1]), Double.parseDouble(split[2]), is);
 		        } else {
 		        	is = new GuitarSpec(b, t, tw, bw, split[5], Integer.parseInt(split[8]));
-		        	si = new Guitar(split[1], Double.parseDouble(split[2]), is);
+		        	si = new Guitar(Integer.parseInt(split[1]), Double.parseDouble(split[2]), is);
 		        }
 		        i.addInstrumentFromFile(si);
 		      }
@@ -149,7 +170,7 @@ public class Data{
 	public void writeFile(StringInstrument instrument) {
 		try {
 			InstrumentSpec s = instrument.getInstrumentSpec();
-		      FileWriter myWriter = new FileWriter("inventory.txt");
+		      FileWriter myWriter = new FileWriter("Inventory.txt");
 		      myWriter.write(instrument.getClass() +" "+instrument.getSerialNumber()
 		      +" "+ instrument.getPrice()+" "+s.getBuilder()
 		      +" "+ s.getType() +" "+ s.getModel()

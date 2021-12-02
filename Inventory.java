@@ -1,14 +1,35 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Inventory {
-    public HashMap<InstrumentSpec, ArrayList<StringInstrument>> specMap = new HashMap<>();
-    public ArrayList<StringInstrument> list = new ArrayList<>();
-    public Data d = new Data(this);
+    public static HashMap<InstrumentSpec, ArrayList<StringInstrument>> specMap = new HashMap<>();
+    public static ArrayList<StringInstrument> list = new ArrayList<>();
+    public static Data d = new Data();
 
-    public void main(String[] args){
-    	d.readFile();
+    public static void main(String[] args){
+    	d.readFile(specMap, list);
+		System.out.println("Hello! Please type in what you would like to do (REMOVE, ADD, or SEARCH)");
+		System.out.print("> ");
+		Scanner sc = new Scanner(System.in);
+		String name = sc.nextLine();
+		String name1 = name.toLowerCase();
+		if(name1.equals("remove")) {
 
+		} else if(name1.equals("add")) {
+			System.out.println("State the Instrument(Violin, Mandolin, Guitar), Serial Number, Price, Model, Type, Builder, Top wood, Back wood, and number of strings to add a new instrument");
+			System.out.println("> ");
+			name = sc.nextLine();
+			name1 = name.toLowerCase();
+			System.out.println(name1);
+			String[] strip = name1.split(" ");
+
+
+		} else if(name1.equals("search")) {
+
+		} else {
+			System.out.println("You did not choose a valid action.");
+		}
     }
 
     public boolean addInstrument(String type, int serialNumber, double price, InstrumentSpec spec){

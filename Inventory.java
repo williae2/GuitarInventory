@@ -41,19 +41,17 @@ public class Inventory {
 
     public boolean removeInstrument(StringInstrument instrument){
         //TODO: remove specified instrument. use boolean to show if removal was successful or not.
-
-        return false;
-    }
-
-    public StringInstrument getInstrument(String searchString){
-        //TODO: figure out what we are doing here.
-        return null;
+		InstrumentSpec spec = instrument.getInstrumentSpec();
+		return specMap.get(spec).remove(instrument);
     }
 
     public ArrayList<StringInstrument> search(InstrumentSpec spec){
         //TODO: use attributes in spec and find all specs that match what is in the param.
-
-        return null;
+		ArrayList<StringInstrument> res = specMap.get(spec);
+		if(res==null){
+			return new ArrayList<StringInstrument>();
+		}
+		return specMap.get(spec);
     }
 
     public int getQuantity(InstrumentSpec spec){
